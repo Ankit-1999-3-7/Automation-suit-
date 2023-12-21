@@ -1,0 +1,30 @@
+Cucumber test suite for an online Java compiler involves interactions with the web application to perform actions like entering code, compiling, and verifying the output. Below is an example of a Cucumber test suite with five scenarios using Java and Selenium for the https://www.jdoddle.com/online-java-compiler:
+Feature: Online Java Compiler Functionality
+Scenario: Compile and Execute Java Code
+    Given the user is on the online Java compiler page
+    When the user enters Java code in the editor
+    And clicks on the Compile and Execute button
+    Then the output should be displayed
+
+  Scenario: Compile with Syntax Errors
+    Given the user is on the online Java compiler page
+    When the user enters Java code with syntax errors in the editor
+    And clicks on the Compile button
+    Then syntax error messages should be displayed
+
+  Scenario: Save Code
+    Given the user is on the online Java compiler page
+    When the user enters Java code in the editor
+    And clicks on the Save button
+    Then the code should be saved successfully
+
+  Scenario: Load Saved Code
+    Given the user is on the online Java compiler page
+    When the user loads a previously saved Java code
+    Then the code should be displayed in the editor
+
+  Scenario: Switch Themes
+    Given the user is on the online Java compiler page
+    When the user switches the theme to a different color scheme
+    Then the editor theme should change accordingly  
+
